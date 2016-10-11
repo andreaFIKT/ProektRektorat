@@ -76,10 +76,33 @@ public class Menu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        fragmentLoc1 = new LocationOneFragment();
+        fragmentLoc2 = new LocationTwoFragment();
+        fragmentLoc3 = new Location3Fragment();
+        fragmentLoc4 = new Location4Fragment();
+        fragmentLoc5 = new Location5Fragment();
+        fragmentLoc6 = new Location6Fragment();
+        fragmentLoc7 = new Location7Fragment();
+        fragmentLoc8 = new Location8Fragment();
+        fragmentLoc9 = new Location9Fragment();
+        fragmentLoc10 = new Location10Fragment();
+        fragmentLoc11 = new Location11Fragment();
+        fragmentLoc12 = new Location12Fragment();
+        fragmentLoc13 = new Location13Fragment();
+        fragmentLoc14 = new Location14Fragment();
+        fragmentLoc15 = new Location15Fragment();
+        fragmentLoc16 = new Location16Fragment();
+        fragmentLoc17 = new Location17Fragment();
+        fragmentLoc18 = new Location18Fragment();
+        sMapFragment = SupportMapFragment.newInstance();
+
+
+
+
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/
 
-        sMapFragment = SupportMapFragment.newInstance();
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -90,6 +113,7 @@ public class Menu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         sMapFragment.getMapAsync(this);
+
     }
 
     @Override
@@ -126,6 +150,7 @@ public class Menu extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -137,35 +162,45 @@ public class Menu extends AppCompatActivity
 
         if (id == R.id.location_1)
         {
-            fragmentLoc1 = new LocationOneFragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc1 = new LocationOneFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc1);
             ft.commit();
         }
         else if (id == R.id.location_2)
         {
-            fragmentLoc2 = new LocationTwoFragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc2 = new LocationTwoFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc2);
             ft.commit();
         }
         else if (id == R.id.location_3)
         {
-            fragmentLoc3 = new Location3Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc3 = new Location3Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc3);
             ft.commit();
         }
         else if (id == R.id.location_4)
         {
-            fragmentLoc4 = new Location4Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc4 = new Location4Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc4);
             ft.commit();
         }
         else if (id == R.id.location_5)
         {
-            fragmentLoc5 = new Location5Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc5 = new Location5Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc5);
             ft.commit();
@@ -173,7 +208,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_6)
         {
-            fragmentLoc6 = new Location6Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc6 = new Location6Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc6);
             ft.commit();
@@ -181,7 +218,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_7)
         {
-            fragmentLoc7 = new Location7Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc7 = new Location7Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc7);
             ft.commit();
@@ -189,7 +228,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_8)
         {
-            fragmentLoc8 = new Location8Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc8 = new Location8Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc8);
             ft.commit();
@@ -197,7 +238,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_9)
         {
-            fragmentLoc9 = new Location9Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc9 = new Location9Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc9);
             ft.commit();
@@ -205,7 +248,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_10)
         {
-            fragmentLoc10 = new Location10Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc10 = new Location10Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc10);
             ft.commit();
@@ -213,7 +258,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_11)
         {
-            fragmentLoc11 = new Location11Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc11 = new Location11Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc11);
             ft.commit();
@@ -221,7 +268,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_12)
         {
-            fragmentLoc12 = new Location12Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc12 = new Location12Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc12);
             ft.commit();
@@ -229,7 +278,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_13)
         {
-            fragmentLoc13 = new Location13Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc13 = new Location13Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc13);
             ft.commit();
@@ -237,7 +288,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_14)
         {
-            fragmentLoc14 = new Location14Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc14 = new Location14Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc14);
             ft.commit();
@@ -245,7 +298,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_15)
         {
-            fragmentLoc15 = new Location15Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc15 = new Location15Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc15);
             ft.commit();
@@ -253,7 +308,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_16)
         {
-            fragmentLoc16 = new Location16Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc16 = new Location16Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc16);
             ft.commit();
@@ -261,7 +318,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_17)
         {
-            fragmentLoc17 = new Location17Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc17 = new Location17Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc17);
             ft.commit();
@@ -269,7 +328,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.location_18)
         {
-            fragmentLoc18 = new Location18Fragment();
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc18 = new Location18Fragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragmentLoc18);
             ft.commit();

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Po Stapkite na Sv.Kliment Ohridski</string>
     <string name="txt_selectLanguage">Select language</string>
 
     <string-array name="language">
-        <item>Spanish</item>
-        <item>French</item>
-        <item>English</item>
+        <item>Espagnol</item>
+        <item>Francais</item>
+        <item>Engle</item>
+
     </string-array>
     <string name="continueB">continue...</string>
 

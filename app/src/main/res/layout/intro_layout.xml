@@ -28,15 +28,10 @@
         android:textSize="20sp"
         android:textColor="#4d3319" />
 
-    <Spinner
-        android:layout_width="match_parent"
+    <ListView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/introSelectLanguage"
-        android:spinnerMode="dropdown"
-        android:background="#dfbf9f"
-        android:layout_below="@+id/selectLanguageLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/introSelectLanguage"></ListView>
 
     <Button
         android:layout_width="match_parent"

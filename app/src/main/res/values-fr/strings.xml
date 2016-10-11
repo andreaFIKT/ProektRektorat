@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Po Stapkite na Sv.Kliment Ohridski</string>
-    <string name="txt_selectLanguage">Select language</string>
+    <string name="app_name">Francusko ime na app</string>
+    <string name="txt_selectLanguage">Izberi jazik na francuski</string>
 
     <string-array name="language">
-        <item>Spanish</item>
-        <item>French</item>
+        <item> Espain</item>
+        <item>Francais</item>
         <item>English</item>
     </string-array>
     <string name="continueB">continue...</string>
 
 
     <string-array name="locations">
-        <item>Плаошник</item>
+        <item>ПлаошникFRA</item>
         <item>Горна Порта</item>
         <item>Самуилова тврдина</item>
         <item>Св. Димитрија</item>
