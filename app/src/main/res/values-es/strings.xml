@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Po Stapkite na Sv.Kliment Ohridski</string>
-    <string name="txt_selectLanguage">Select language</string>
+    <string name="app_name">Imeto na aplikacijata na spanski</string>
+    <string name="txt_selectLanguage">Select language na spanski</string>
 
     <string-array name="language">
         <item>Espagnol</item>
@@ -12,7 +12,7 @@
 
 
     <string-array name="locations">
-        <item>Плаошник</item>
+        <item>Плаошник na spanski</item>
         <item>Горна Порта</item>
         <item>Самуилова тврдина</item>
         <item>Св. Димитрија</item>
@@ -36,6 +36,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="btnMore">Show more</string>
-    <string name="btnLess">Show less</string>
+    <string name="btnMore">mostrar más</string>
+    <string name="btnLess">Muestra menos</string>
 </resources>

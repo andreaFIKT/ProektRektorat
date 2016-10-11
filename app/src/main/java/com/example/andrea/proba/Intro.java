@@ -3,7 +3,10 @@ package com.example.andrea.proba;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +18,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.andrea.proba.Utils.LocaleUtils;
+
+import java.util.Locale;
 
 /**
  * Created by ANDREA on 10/8/2016.
@@ -92,28 +97,66 @@ public class Intro extends Activity {
         selectLanguage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String lang;
                 if(i==0) {
-                    LocaleUtils.setLocale(LocaleUtils.SPANISH);
+                    lang = "es";
+                    Locale myLocale = new Locale(lang);
+                    Resources res = getBaseContext().getResources();
+                    DisplayMetrics dm = res.getDisplayMetrics();
+                    Configuration conf = res.getConfiguration();
+                    conf.locale = myLocale;
+
+                    res.updateConfiguration(conf, dm);
+                    getBaseContext().getResources().updateConfiguration(
+                            getBaseContext().getResources().getConfiguration(),
+                            getBaseContext().getResources().getDisplayMetrics());
+                    /*LocaleUtils.setLocale(LocaleUtils.SPANISH);
                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
                     adapterMk = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
                     selectLanguage.setAdapter(adapterMk);
                     buttonContinue.setText(R.string.continueB);
-                    Log.d("Spanski jazik","Izberen e spanski jazik");
+                    Log.d("Spanski jazik","Izberen e spanski jazik");*/
                 }
                 else if(i==1) {
-                    LocaleUtils.setLocale(LocaleUtils.FRENCH);
+                    lang = "fr";
+                    Locale myLocale = new Locale(lang);
+                    Resources res = getBaseContext().getResources();
+                    DisplayMetrics dm = res.getDisplayMetrics();
+                    Configuration conf = res.getConfiguration();
+                    conf.locale = myLocale;
+
+                    res.updateConfiguration(conf, dm);
+                    getBaseContext().getResources().updateConfiguration(
+                            getBaseContext().getResources().getConfiguration(),
+                            getBaseContext().getResources().getDisplayMetrics());
+
+                   /* LocaleUtils.setLocale(LocaleUtils.FRENCH);
                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
                     adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
                     selectLanguage.setAdapter(adapterEn);
                     buttonContinue.setText(R.string.continueB);
+                    Log.d("Francuski jazik","Izberen e spanski jazik");*/
+
                 }
                 else if(i==2)
                 {
-                    LocaleUtils.setLocale(LocaleUtils.ENGLISH);
+                    lang = "en";
+                    Locale myLocale = new Locale(lang);
+                    Resources res = getBaseContext().getResources();
+                    DisplayMetrics dm = res.getDisplayMetrics();
+                    Configuration conf = res.getConfiguration();
+                    conf.locale = myLocale;
+
+                    res.updateConfiguration(conf, dm);
+                    getBaseContext().getResources().updateConfiguration(
+                            getBaseContext().getResources().getConfiguration(),
+                            getBaseContext().getResources().getDisplayMetrics());
+                   /* LocaleUtils.setLocale(LocaleUtils.ENGLISH);
                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
                     adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
                     selectLanguage.setAdapter(adapterEn);
                     buttonContinue.setText(R.string.continueB);
+                    Log.d("Angliski jazik","Izberen e spanski jazik");*/
                 }
 
             }

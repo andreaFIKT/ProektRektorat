@@ -35,6 +35,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="btnMore">Show more</string>
-    <string name="btnLess">Show less</string>
+    <string name="btnMore">montre moins</string>
+    <string name="btnLess">montre plus</string>
 </resources>
