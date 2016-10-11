@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Suivant les traces de St. Kliment Ohridski</string>
-    <string name="txt_selectLanguage">Choisissez la langue</string>
+    <string name="app_name">Francusko ime na app</string>
+    <string name="txt_selectLanguage">Izberi jazik na francuski</string>
 
     <string-array name="language">
         <item> Espain</item>
@@ -8,7 +8,6 @@
         <item>English</item>
     </string-array>
     <string name="continueB">continue...</string>
-    <string name="map">Carte</string>
 
 
     <string-array name="locations">
@@ -32,10 +31,10 @@
         <item>Архангел Михаил, Радожда</item>
     </string-array>
 
-    <string name="navigation_drawer_open">Ouvrez le tiroir de navigation</string>
-    <string name="navigation_drawer_close">Fermer la navigation tiroir</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Paramètres</string>
-    <string name="btnMore">montre plus </string>
-    <string name="btnLess">montre moins</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnMore">montre moins</string>
+    <string name="btnLess">montre plus</string>
 </resources>

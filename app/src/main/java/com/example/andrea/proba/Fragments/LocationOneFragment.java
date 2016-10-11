@@ -39,11 +39,11 @@ public class LocationOneFragment extends Fragment {
                 web1.setHorizontalScrollBarEnabled(true);
                 web1.loadUrl("http://www.google.com");
                 web1.requestFocus();
-                buttonMore.setVisibility(View.GONE);
+//                buttonMore.setVisibility(View.GONE);
 
             }
         });
-        buttonMore.setVisibility(View.VISIBLE);
+//        buttonMore.setVisibility(View.VISIBLE);
         buttonLess = (Button)v.findViewById(R.id.btnLess);
         buttonLess.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +53,7 @@ public class LocationOneFragment extends Fragment {
                 web1.setHorizontalScrollBarEnabled(true);
                 web1.loadUrl("http://www.fikt.uklo.edu.mk");
                 web1.requestFocus();
-                buttonLess.setVisibility(View.GONE);
+//                buttonLess.setVisibility(View.GONE);
 
             }
         });

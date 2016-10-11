@@ -1,6 +1,5 @@
 package com.example.andrea.proba.Fragments;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,23 +13,23 @@ import com.example.andrea.proba.R;
 /**
  * Created by ANDREA on 10/10/2016.
  */
-public class Location17Fragment extends android.support.v4.app.Fragment {
+public class Location19Fragment extends android.support.v4.app.Fragment {
     WebView web2;
     Button buttonMore;
     Button buttonLess;
 
-    public Location17Fragment() {
+    public Location19Fragment() {
         // Required empty public constructor
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.location_17_fragment, container, false);
-        web2 = (WebView) v.findViewById(R.id.webViewLoc17);
+        View v = inflater.inflate(R.layout.location_19_fragment, container, false);
+        web2 = (WebView) v.findViewById(R.id.webViewLoc18);
         web2.setHorizontalScrollBarEnabled(true);
         web2.loadUrl("http://www.fikt.uklo.edu.mk");
         web2.requestFocus();
-        buttonMore = (Button) v.findViewById(R.id.btnMoreLoc17);
+        buttonMore = (Button) v.findViewById(R.id.btnMoreLoc19);
         buttonMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,8 +42,8 @@ public class Location17Fragment extends android.support.v4.app.Fragment {
 
             }
         });
-//        buttonMore.setVisibility(View.VISIBLE);
-        buttonLess = (Button)v.findViewById(R.id.btnLessLoc17);
+
+        buttonLess = (Button)v.findViewById(R.id.btnLessLoc19);
         buttonLess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

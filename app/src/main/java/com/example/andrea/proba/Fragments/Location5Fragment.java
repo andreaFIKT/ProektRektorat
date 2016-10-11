@@ -43,7 +43,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
 
             }
         });
-        buttonMore.setVisibility(View.VISIBLE);
+
         buttonLess = (Button)v.findViewById(R.id.btnLessLoc5);
         buttonLess.setOnClickListener(new View.OnClickListener() {
             @Override

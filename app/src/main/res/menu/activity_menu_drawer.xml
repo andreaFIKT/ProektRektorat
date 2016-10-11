@@ -4,7 +4,7 @@
         <item
             android:id="@+id/google_map"
             android:icon="@drawable/map_icon"
-            android:title="Map" />
+            android:title="@string/map" />
         <item
             android:id="@+id/location_1"
             android:icon="@drawable/rsz_num_1"
@@ -77,6 +77,10 @@
             android:id="@+id/location_18"
             android:icon="@drawable/rsz_num_18"
             android:title="18" />
+        <item
+            android:id="@+id/location_19"
+            android:icon="@drawable/rsz_num_19_t"
+            android:title="19" />
     </group>
 
 </menu>

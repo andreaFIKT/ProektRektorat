@@ -29,6 +29,7 @@ import com.example.andrea.proba.Fragments.Location15Fragment;
 import com.example.andrea.proba.Fragments.Location16Fragment;
 import com.example.andrea.proba.Fragments.Location17Fragment;
 import com.example.andrea.proba.Fragments.Location18Fragment;
+import com.example.andrea.proba.Fragments.Location19Fragment;
 import com.example.andrea.proba.Fragments.Location3Fragment;
 import com.example.andrea.proba.Fragments.Location4Fragment;
 import com.example.andrea.proba.Fragments.Location5Fragment;
@@ -71,6 +72,7 @@ public class Menu extends AppCompatActivity
     android.support.v4.app.Fragment fragmentLoc16;
     android.support.v4.app.Fragment fragmentLoc17;
     android.support.v4.app.Fragment fragmentLoc18;
+    android.support.v4.app.Fragment fragmentLoc19;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +96,8 @@ public class Menu extends AppCompatActivity
         fragmentLoc16 = new Location16Fragment();
         fragmentLoc17 = new Location17Fragment();
         fragmentLoc18 = new Location18Fragment();
+        fragmentLoc19 = new Location19Fragment();
+
         sMapFragment = SupportMapFragment.newInstance();
 
 
@@ -336,6 +340,16 @@ public class Menu extends AppCompatActivity
             ft.commit();
 
         }
+        else if (id == R.id.location_19)
+        {
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc18 = new Location18Fragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragmentLoc19);
+            ft.commit();
+
+        }
         else if (id == R.id.google_map)
         {
             if(fragmentLoc1.isAdded())
@@ -374,6 +388,8 @@ public class Menu extends AppCompatActivity
                 sFM.beginTransaction().hide(fragmentLoc17).commit();
             else if(fragmentLoc18.isAdded())
                 sFM.beginTransaction().hide(fragmentLoc18).commit();
+            else if(fragmentLoc19.isAdded())
+                sFM.beginTransaction().hide(fragmentLoc19).commit();
             if (!sMapFragment.isAdded())
                 sFM.beginTransaction().add(R.id.map, sMapFragment).commit();
             else
@@ -393,94 +409,97 @@ public class Menu extends AppCompatActivity
         String[] lok = res.getStringArray(R.array.locations);*/
         mMap = googleMap;
         final Marker m1 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1111153,20.7865056))
-                .title("Plaosnik")
+                .position(new LatLng(41.112406,20.790928))
+//                .title("Plaosnik")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_1m1)));
 
         final Marker marker2 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.115029,20.7942148))
+                .position(new LatLng( 41.115026,20.794766))
 //                .title(lok[1])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_1m2)));
 
         final Marker marker3 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1147784,20.7900628))
+                .position(new LatLng(41.114851,20.791027))
 //                .title(lok[2])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m3)));
 
         final Marker marker4 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1142698,20.7948473))
+                .position(new LatLng(41.114369,20.795098))
 //                .title(lok[3])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m4)));
 
         final Marker marker5 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1137747,20.7942411))
+                .position(new LatLng( 41.114154,20.795518))
 //                .title(lok[4])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m5)));
 
         final Marker marker6 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1141021,20.7955983))
+                .position(new LatLng(41.113949,20.796250))
 //                .title(lok[5])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m6)));
 
         final Marker marker7 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1133544,20.7957163))
+                .position(new LatLng(41.113558,20.796705))
 //                .title(lok[6])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m7)));
 
         final Marker marker8 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1125629,20.7958238))
+                .position(new LatLng(  41.112539,  20.796875))
 //                .title(lok[7])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m8)));
-
         final Marker marker9 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1128492,20.7948688))
+                .position(new LatLng(41.112226,  20.797293))
 //                .title(lok[8])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m9)));
 
         final Marker marker10 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1123501,20.796808))
+                .position(new LatLng(41.112181,20.797474))
 //                .title(lok[9])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m10)));
 
         final Marker marker11 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.112829,20.7922778))
+                .position(new LatLng(41.112076,20.794189))
 //                .title(lok[10])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m11)));
 
         final Marker marker12 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1111153,20.7865056))
+                .position(new LatLng( 41.111101,20.789318))
 //                .title(lok[11])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m12)));
 
         final Marker marker13 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1390537,20.8186571))
+                .position(new LatLng(41.139034,20.836167))
 //                .title(lok[12])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m13)));
 
         final Marker marker14 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.0831314,20.7932584))
+                .position(new LatLng( 41.082848, 20.828286))
 //                .title(lok[13])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m14)));
 
         final Marker marker15 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(40.9488976,20.7658982))
+                .position(new LatLng(41.104558,20.631910))
 //                .title(lok[14])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m15)));
 
         final Marker marker16 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(40.9155354,20.7388616))
+                .position(new LatLng(40.948865,20.774643))
 //                .title(lok[15])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m16)));
 
         final Marker marker17 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.144578,20.6482332))
+                .position(new LatLng(40.913986,20.740982))
 //                .title(lok[16])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m17)));
 
         final Marker marker18 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.1062544,20.6299129))
+                .position(new LatLng( 41.144569,20.650064))
 //                .title(lok[17])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m18)));
+        final Marker marker19 = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng( 41.104558,20.631910))
+//                .title(lok[17])
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_1num_19)));
 
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(m1.getPosition(),10));
        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
@@ -650,6 +669,16 @@ public class Menu extends AppCompatActivity
                    fragmentLoc18 = new Location18Fragment();
                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                    ft.replace(R.id.content_frame, fragmentLoc18);
+                   ft.commit();
+//                   Log.d("MARKER 1","PRVA LOKACIJA");
+               }
+               else if(marker.equals(marker19))
+               {
+                   if(sMapFragment.isAdded())
+                       sFM.beginTransaction().hide(sMapFragment).commit();
+                   fragmentLoc19 = new Location19Fragment();
+                   FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                   ft.replace(R.id.content_frame, fragmentLoc19);
                    ft.commit();
 //                   Log.d("MARKER 1","PRVA LOKACIJA");
                }
