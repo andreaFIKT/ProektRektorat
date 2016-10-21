@@ -3,9 +3,8 @@
     <string name="txt_selectLanguage">Изберете јазик</string>
 
     <string-array name="language">
-        <item> Espain</item>
-        <item>Francais</item>
-        <item>English</item>
+        <item>Македонски</item>
+        <item>Англиски</item>
     </string-array>
     <string name="continueB">continue...</string>
     <string name="map">Мапа</string>

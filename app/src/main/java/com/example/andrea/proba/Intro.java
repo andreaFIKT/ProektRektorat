@@ -118,7 +118,7 @@ public class Intro extends Activity {
                     Log.d("Spanski jazik","Izberen e spanski jazik");*/
                 }
                 else if(i==1) {
-                    lang = "es";
+                    lang = "en";
                     Locale myLocale = new Locale(lang);
                     Resources res = getBaseContext().getResources();
                     DisplayMetrics dm = res.getDisplayMetrics();
@@ -138,47 +138,6 @@ public class Intro extends Activity {
                     Log.d("Francuski jazik","Izberen e spanski jazik");*/
 
                 }
-                else if(i==2)
-                {
-                    lang = "fr";
-                    Locale myLocale = new Locale(lang);
-                    Resources res = getBaseContext().getResources();
-                    DisplayMetrics dm = res.getDisplayMetrics();
-                    Configuration conf = res.getConfiguration();
-                    conf.locale = myLocale;
-
-                    res.updateConfiguration(conf, dm);
-                    getBaseContext().getResources().updateConfiguration(
-                            getBaseContext().getResources().getConfiguration(),
-                            getBaseContext().getResources().getDisplayMetrics());
-                   /* LocaleUtils.setLocale(LocaleUtils.ENGLISH);
-                    txtSelectLanguage.setText(R.string.txt_selectLanguage);
-                    adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
-                    selectLanguage.setAdapter(adapterEn);
-                    buttonContinue.setText(R.string.continueB);
-                    Log.d("Angliski jazik","Izberen e spanski jazik");*/
-                }
-                else if(i==3)
-                {
-                    lang = "en";
-                    Locale myLocale = new Locale(lang);
-                    Resources res = getBaseContext().getResources();
-                    DisplayMetrics dm = res.getDisplayMetrics();
-                    Configuration conf = res.getConfiguration();
-                    conf.locale = myLocale;
-
-                    res.updateConfiguration(conf, dm);
-                    getBaseContext().getResources().updateConfiguration(
-                            getBaseContext().getResources().getConfiguration(),
-                            getBaseContext().getResources().getDisplayMetrics());
-                   /* LocaleUtils.setLocale(LocaleUtils.ENGLISH);
-                    txtSelectLanguage.setText(R.string.txt_selectLanguage);
-                    adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
-                    selectLanguage.setAdapter(adapterEn);
-                    buttonContinue.setText(R.string.continueB);
-                    Log.d("Angliski jazik","Izberen e spanski jazik");*/
-                }
-
             }
         });
 

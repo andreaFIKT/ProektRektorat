@@ -5,8 +5,6 @@
 
     <string-array name="language">
         <item>Macedonian</item>
-        <item>Spanish</item>
-        <item>French</item>
         <item>English</item>
     </string-array>
     <string name="map">Map</string>
