@@ -1,6 +1,9 @@
 package com.example.andrea.proba.Fragments;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +21,7 @@ public class Location18Fragment extends android.support.v4.app.Fragment {
     WebView web2;
     Button buttonMore;
     Button buttonLess;
+    boolean connA;
 
     public Location18Fragment() {
         // Required empty public constructor
@@ -27,19 +31,35 @@ public class Location18Fragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.location_18_fragment, container, false);
         web2 = (WebView) v.findViewById(R.id.webViewLoc18);
-        web2.setHorizontalScrollBarEnabled(true);
-        web2.loadUrl("http://www.fikt.uklo.edu.mk");
-        web2.requestFocus();
+        connA = checkNetworkConnection(getContext());
+        if(connA)
+        {
+            web2.setHorizontalScrollBarEnabled(true);
+            web2.loadUrl("http://www.fikt.uklo.edu.mk");
+            web2.requestFocus();
+        }
+        else
+        {
+            web2.setHorizontalScrollBarEnabled(true);
+            web2.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+            web2.requestFocus();
+        }
         buttonMore = (Button) v.findViewById(R.id.btnMoreLoc18);
         buttonMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                web2.getSettings().setJavaScriptEnabled(true);
-                web2.setWebViewClient(new WebViewClient());
-                web2.setHorizontalScrollBarEnabled(true);
-                web2.loadUrl("http://www.google.com");
-                web2.requestFocus();
-//                buttonMore.setVisibility(View.GONE);
+                if(connA)
+                {
+                    web2.setHorizontalScrollBarEnabled(true);
+                    web2.loadUrl("http://www.google.com");
+                    web2.requestFocus();
+                }
+                else
+                {
+                    web2.setHorizontalScrollBarEnabled(true);
+                    web2.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web2.requestFocus();
+                }
 
             }
         });
@@ -48,16 +68,35 @@ public class Location18Fragment extends android.support.v4.app.Fragment {
         buttonLess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                web2.getSettings().setJavaScriptEnabled(true);
-                web2.setWebViewClient(new WebViewClient());
-                web2.setHorizontalScrollBarEnabled(true);
-                web2.loadUrl("http://www.fikt.uklo.edu.mk");
-                web2.requestFocus();
-//                buttonLess.setVisibility(View.GONE);
+                if(connA)
+                {
+                    web2.setHorizontalScrollBarEnabled(true);
+                    web2.loadUrl("http://www.fikt.uklo.edu.mk");
+                    web2.requestFocus();
+                }
+                else
+                {
+                    web2.setHorizontalScrollBarEnabled(true);
+                    web2.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web2.requestFocus();
+                }
 
             }
         });
 
         return v;
+    }
+    public boolean checkNetworkConnection(Context _context) {
+        ConnectivityManager connectivity = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo[] info = connectivity.getAllNetworkInfo();
+            if (info != null)
+                for (int i = 0; i < info.length; i++)
+                    if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+                        return true;
+                    }
+
+        }
+        return false;
     }
 }

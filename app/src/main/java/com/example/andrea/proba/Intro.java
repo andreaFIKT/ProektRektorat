@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.andrea.proba.Utils.LocaleUtils;
 
@@ -99,6 +100,8 @@ public class Intro extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String lang;
                 if(i==0) {
+
+
                     lang = "mk";
                     Locale myLocale = new Locale(lang);
                     Resources res = getBaseContext().getResources();
@@ -110,14 +113,16 @@ public class Intro extends Activity {
                     getBaseContext().getResources().updateConfiguration(
                             getBaseContext().getResources().getConfiguration(),
                             getBaseContext().getResources().getDisplayMetrics());
-                    /*LocaleUtils.setLocale(LocaleUtils.SPANISH);
+//                    LocaleUtils.setLocale(LocaleUtils.SPANISH);
                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
                     adapterMk = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
                     selectLanguage.setAdapter(adapterMk);
                     buttonContinue.setText(R.string.continueB);
-                    Log.d("Spanski jazik","Izberen e spanski jazik");*/
                 }
                 else if(i==1) {
+                   /* Configuration newConfig = new Configuration();
+                    newConfig.locale = Locale.ENGLISH;
+                    onConfigurationChanged(newConfig);*/
                     lang = "en";
                     Locale myLocale = new Locale(lang);
                     Resources res = getBaseContext().getResources();
@@ -130,13 +135,11 @@ public class Intro extends Activity {
                             getBaseContext().getResources().getConfiguration(),
                             getBaseContext().getResources().getDisplayMetrics());
 
-                   /* LocaleUtils.setLocale(LocaleUtils.FRENCH);
+//                    LocaleUtils.setLocale(LocaleUtils.FRENCH);
                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
                     adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
                     selectLanguage.setAdapter(adapterEn);
                     buttonContinue.setText(R.string.continueB);
-                    Log.d("Francuski jazik","Izberen e spanski jazik");*/
-
                 }
             }
         });
@@ -149,6 +152,21 @@ public class Intro extends Activity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        getBaseContext().getResources().updateConfiguration(newConfig, getBaseContext().getResources().getDisplayMetrics());
+        setContentView(R.layout.intro_layout);
+        setTitle(R.string.app_name);
+
+        // Checks the active language
+        if (newConfig.locale == Locale.ENGLISH) {
+            Toast.makeText(this, "English", Toast.LENGTH_SHORT).show();
+        } else if (newConfig.locale == Locale.FRENCH){
+            Toast.makeText(this, "French", Toast.LENGTH_SHORT).show();
+        }
     }
     /*LocaleHelper.setLocale(getApplicationContext(),"en");
     txtSelectLanguage.setText(R.string.txt_selectLanguage);

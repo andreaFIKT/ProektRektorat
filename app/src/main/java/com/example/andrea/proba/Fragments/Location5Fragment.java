@@ -1,6 +1,9 @@
 package com.example.andrea.proba.Fragments;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +21,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
     WebView web5;
     Button buttonMore;
     Button buttonLess;
+    boolean connA;
 
     public Location5Fragment() {
         // Required empty public constructor
@@ -27,9 +31,19 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.location_5_fragment, container, false);
         web5 = (WebView) v.findViewById(R.id.webViewLoc5);
-        web5.setHorizontalScrollBarEnabled(true);
-        web5.loadUrl("http://www.fikt.uklo.edu.mk");
-        web5.requestFocus();
+        connA = checkNetworkConnection(getContext());
+        if(connA)
+        {
+            web5.setHorizontalScrollBarEnabled(true);
+            web5.loadUrl("http://www.fikt.uklo.edu.mk");
+            web5.requestFocus();
+        }
+        else
+        {
+            web5.setHorizontalScrollBarEnabled(true);
+            web5.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+            web5.requestFocus();
+        }
         buttonMore = (Button) v.findViewById(R.id.btnMoreLoc5);
         buttonMore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +53,19 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
                 web5.setHorizontalScrollBarEnabled(true);
                 web5.loadUrl("http://www.google.com");
                 web5.requestFocus();
-//                buttonMore.setVisibility(View.GONE);
+
+                if(connA)
+                {
+                    web5.setHorizontalScrollBarEnabled(true);
+                    web5.loadUrl("http://www.google.com");
+                    web5.requestFocus();
+                }
+                else
+                {
+                    web5.setHorizontalScrollBarEnabled(true);
+                    web5.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web5.requestFocus();
+                }
 
             }
         });
@@ -48,16 +74,34 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
         buttonLess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                web5.getSettings().setJavaScriptEnabled(true);
-                web5.setWebViewClient(new WebViewClient());
-                web5.setHorizontalScrollBarEnabled(true);
-                web5.loadUrl("http://www.fikt.uklo.edu.mk");
-                web5.requestFocus();
-//                buttonLess.setVisibility(View.GONE);
-
+                if(connA)
+                {
+                    web5.setHorizontalScrollBarEnabled(true);
+                    web5.loadUrl("http://www.fikt.uklo.edu.mk");
+                    web5.requestFocus();
+                }
+                else
+                {
+                    web5.setHorizontalScrollBarEnabled(true);
+                    web5.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web5.requestFocus();
+                }
             }
         });
 
         return v;
+    }
+    public boolean checkNetworkConnection(Context _context) {
+        ConnectivityManager connectivity = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo[] info = connectivity.getAllNetworkInfo();
+            if (info != null)
+                for (int i = 0; i < info.length; i++)
+                    if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+                        return true;
+                    }
+
+        }
+        return false;
     }
 }

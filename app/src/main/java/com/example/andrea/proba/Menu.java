@@ -11,6 +11,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,6 +22,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.andrea.proba.Fragments.ChangeLanguageFragment;
 import com.example.andrea.proba.Fragments.GoogleMapFragment;
 import com.example.andrea.proba.Fragments.Location10Fragment;
 import com.example.andrea.proba.Fragments.Location11Fragment;
@@ -75,6 +77,7 @@ public class Menu extends AppCompatActivity
     android.support.v4.app.Fragment fragmentLoc17;
     android.support.v4.app.Fragment fragmentLoc18;
     android.support.v4.app.Fragment fragmentLoc19;
+    android.support.v4.app.Fragment changeLanFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,16 +102,17 @@ public class Menu extends AppCompatActivity
         fragmentLoc17 = new Location17Fragment();
         fragmentLoc18 = new Location18Fragment();
         fragmentLoc19 = new Location19Fragment();
+        changeLanFragment = new ChangeLanguageFragment();
 
         sMapFragment = SupportMapFragment.newInstance();
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("@string/app_name");
 
-
-
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
-
-
+        /*ActionBar acBar = getSupportActionBar();
+        acBar.setTitle("@string/toolbar");
+        acBar.show();*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -164,9 +168,16 @@ public class Menu extends AppCompatActivity
 
         if(sMapFragment.isAdded())
             sFM.beginTransaction().hide(sMapFragment).commit();
-
-
-        if (id == R.id.location_1)
+        if(id == R.id.changeLanguage)
+        {
+            if(sMapFragment.isAdded())
+                sFM.beginTransaction().hide(sMapFragment).commit();
+//            fragmentLoc1 = new LocationOneFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, changeLanFragment);
+            ft.commit();
+        }
+        else if (id == R.id.location_1)
         {
             if(sMapFragment.isAdded())
                 sFM.beginTransaction().hide(sMapFragment).commit();
@@ -354,7 +365,9 @@ public class Menu extends AppCompatActivity
         }
         else if (id == R.id.google_map)
         {
-            if(fragmentLoc1.isAdded())
+            if(changeLanFragment.isAdded())
+                sFM.beginTransaction().hide(changeLanFragment).commit();
+            else if(fragmentLoc1.isAdded())
                 sFM.beginTransaction().hide(fragmentLoc1).commit();
             else if(fragmentLoc2.isAdded())
                 sFM.beginTransaction().hide(fragmentLoc2).commit();

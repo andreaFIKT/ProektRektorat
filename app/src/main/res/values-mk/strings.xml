@@ -6,29 +6,31 @@
         <item>Македонски</item>
         <item>Англиски</item>
     </string-array>
-    <string name="continueB">continue...</string>
-    <string name="map">Мапа</string>
 
-    <string-array name="locations">
-        <item>ПлаошникFRA</item>
-        <item>Горна Порта</item>
-        <item>Самуилова тврдина</item>
-        <item>Св. Димитрија</item>
-        <item>Богородица Перивлепта</item>
-        <item>Св. Константин и Елена</item>
-        <item>Мал Св. Врачи</item>
-        <item>Мал Св. Климент</item>
-        <item>Богородица Болничка</item>
-        <item>Св. Никола Болнички</item>
-        <item>Св. Софија</item>
-        <item>Св. Јован Канео</item>
-        <item>Св. Спас, с. Лескоец</item>
-        <item>Пресвета Богородица, с. Велестово</item>
-        <item>Богородица Заумска</item>
-        <item>Св. Наум</item>
-        <item>Пресвета Богородица, Калишта</item>
-        <item>Архангел Михаил, Радожда</item>
-    </string-array>
+    <string name="continueB">продолжи...</string>
+    <string name="toolBar">Св.Климент Охридски</string>
+    <string name="changeLanguage">Промени го јазикот</string>
+    <string name="map">Мапа</string>
+    <string name="loc1">Плаошник</string>
+    <string name="loc2">Горна Порта</string>
+    <string name="loc3">Самуилова тврдина</string>
+    <string name="loc4">Св. Димитрија</string>
+    <string name="loc5">Богородица Перивлепта</string>
+    <string name="loc6">Св. Константин и Елена</string>
+    <string name="loc7">Мал Св. Врачи</string>
+    <string name="loc8">Мал Св. Климент</string>
+    <string name="loc9">Богородица Болничка</string>
+    <string name="loc10">Св. Никола Болнички</string>
+    <string name="loc11">Св. Софија</string>
+    <string name="loc12">Св. Јован Канео</string>
+    <string name="loc13">Св. Спас, с. Лескоец</string>
+    <string name="loc14">Пресвета Богородица, с. Велестово</string>
+    <string name="loc15">Богородица Заумска</string>
+    <string name="loc16">Св. Наум</string>
+    <string name="loc17">Пресвета Богородица, Калишта</string>
+    <string name="loc18">Архангел Михаил, Радожда</string>
+    <string name="loc19">Локација 19</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
