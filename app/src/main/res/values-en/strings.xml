@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Following the footsteps of St. Kliment Ohridski</string>
-    <string name="txt_selectLanguage">Select language</string>
+    <string name="app_name">Following the footsteps of St. Clement Ohrids</string>
+    <string name="txt_selectLanguage">Choose language</string>
 
     <string-array name="language">
         <item>Macedonian</item>
@@ -11,25 +11,25 @@
     <string name="map">Map</string>
     <string name="continueB">continue...</string>
     <string name="changeLanguage">Change language</string>
-    <string name="loc1">Плаошник</string>
-    <string name="loc2">Горна Порта</string>
-    <string name="loc3">Самуилова тврдина</string>
-    <string name="loc4">Св. Димитрија</string>
-    <string name="loc5">Богородица Перивлепта</string>
-    <string name="loc6">Св. Константин и Елена</string>
-    <string name="loc7">Мал Св. Врачи</string>
-    <string name="loc8">Мал Св. Климент</string>
-    <string name="loc9">Богородица Болничка</string>
-    <string name="loc10">Св. Никола Болнички</string>
-    <string name="loc11">Св. Софија</string>
-    <string name="loc12">Св. Јован Канео</string>
-    <string name="loc13">Св. Спас, с. Лескоец</string>
+    <string name="loc1">Saint Pantelejmon</string>
+    <string name="loc2">Upper Gate</string>
+    <string name="loc3">Car Samoils Fortress</string>
+    <string name="loc4">Saint Demetrius</string>
+    <string name="loc5">Holy Mary Peribleptos</string>
+    <string name="loc6">Saints Constantine and Helen</string>
+    <string name="loc7">Church "Small St. Vrach" "St. Cosmas and Damian"</string>
+    <string name="loc8">Small Saint Clement</string>
+    <string name="loc9">Holy Mother Bolnichka</string>
+    <string name="loc10">Saint Nikola Bolnichki</string>
+    <string name="loc11">Saint Sophia</string>
+    <string name="loc12">Church of St.John the Theologian-at Kaneo</string>
+    <string name="loc13">Saint Spas, village Leskoec</string>
     <string name="loc14">Пресвета Богородица, с. Велестово</string>
-    <string name="loc15">Богородица Заумска</string>
-    <string name="loc16">Св. Наум</string>
-    <string name="loc17">Пресвета Богородица, Калишта</string>
-    <string name="loc18">Архангел Михаил, Радожда</string>
-    <string name="loc19">Локација 19</string>
+    <string name="loc15">Location 15</string>
+    <string name="loc16">Saint Zaum</string>
+    <string name="loc17">Monastery Saint Zaum Ohrid</string>
+    <string name="loc18">Monastery of Kalista</string>
+    <string name="loc19">Saint Archangel Michael</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

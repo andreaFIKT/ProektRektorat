@@ -3,7 +3,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/changeLanguage"
-            android:icon="@drawable/map_icon"
+            android:icon="@drawable/rsz_icon_32"
             android:title="@string/changeLanguage" />
         <item
             android:id="@+id/google_map"

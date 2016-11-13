@@ -425,95 +425,78 @@ public class Menu extends AppCompatActivity
         mMap = googleMap;
         final Marker m1 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.112406,20.790928))
-//                .title("Plaosnik")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_1m1)));
 
         final Marker marker2 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng( 41.115026,20.794766))
-//                .title(lok[1])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_1m2)));
 
         final Marker marker3 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.114851,20.791027))
-//                .title(lok[2])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m3)));
 
         final Marker marker4 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.114369,20.795098))
-//                .title(lok[3])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m4)));
 
         final Marker marker5 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng( 41.114154,20.795518))
-//                .title(lok[4])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m5)));
 
         final Marker marker6 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.113949,20.796250))
-//                .title(lok[5])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m6)));
 
         final Marker marker7 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.113558,20.796705))
-//                .title(lok[6])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m7)));
 
         final Marker marker8 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(  41.112539,  20.796875))
-//                .title(lok[7])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m8)));
+
         final Marker marker9 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.112226,  20.797293))
-//                .title(lok[8])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m9)));
 
         final Marker marker10 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.112181,20.797474))
-//                .title(lok[9])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m10)));
 
         final Marker marker11 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.112076,20.794189))
-//                .title(lok[10])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m11)));
 
         final Marker marker12 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng( 41.111101,20.789318))
-//                .title(lok[11])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m12)));
 
         final Marker marker13 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(41.139034,20.836167))
-//                .title(lok[12])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m13)));
 
         final Marker marker14 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng( 41.082848, 20.828286))
-//                .title(lok[13])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m14)));
 
         final Marker marker15 = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(41.104558,20.631910))
-//                .title(lok[14])
+                .position(new LatLng(41.001087,20.803470))
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m15)));
 
         final Marker marker16 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(40.948865,20.774643))
-//                .title(lok[15])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m16)));
 
         final Marker marker17 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(40.913986,20.740982))
-//                .title(lok[16])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m17)));
 
         final Marker marker18 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng( 41.144569,20.650064))
-//                .title(lok[17])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_m18)));
+
         final Marker marker19 = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng( 41.104558,20.631910))
-//                .title(lok[17])
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.rsz_1num_19)));
 
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(m1.getPosition(),10));

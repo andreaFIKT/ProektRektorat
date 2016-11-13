@@ -52,56 +52,11 @@ public class Intro extends Activity {
                 R.array.language, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selectLanguage.setAdapter(adapter);
-
-       /* selectLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                int selection = selectLanguage.getSelectedItemPosition();
-
-                 if(selection==0) {
-                     LocaleUtils.setLocale(LocaleUtils.SPANISH);
-                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
-                     adapterMk = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
-                     selectLanguage.setAdapter(adapterMk);
-                     buttonContinue.setText(R.string.kopceProdolzi);
-                     Log.d("Spanski jazik","Izberen e spanski jazik");
-                 }
-                else if(selection==1) {
-                     LocaleUtils.setLocale(LocaleUtils.FRENCH);
-                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
-                     adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
-                     selectLanguage.setAdapter(adapterEn);
-                     buttonContinue.setText(R.string.continueB);
-                 }
-                else if(selection==2)
-                 {
-                     LocaleUtils.setLocale(LocaleUtils.ENGLISH);
-                     txtSelectLanguage.setText(R.string.txt_selectLanguage);
-                     adapterEn = ArrayAdapter.createFromResource(context, R.array.language, R.layout.support_simple_spinner_dropdown_item);
-                     selectLanguage.setAdapter(adapterEn);
-                     buttonContinue.setText(R.string.continueB);
-                 }
-
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                LocaleHelper.setLocale(getApplicationContext(), "fr");
-                txtSelectLanguage.setText(R.string.izberi_jazik);
-                adapterMk = ArrayAdapter.createFromResource(context, R.array.jazik, R.layout.support_simple_spinner_dropdown_item);
-                selectLanguage.setAdapter(adapterMk);
-                buttonContinue.setText(R.string.kopceProdolzi);
-            }
-        });*/
         selectLanguage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String lang;
                 if(i==0) {
-
-
                     lang = "mk";
                     Locale myLocale = new Locale(lang);
                     Resources res = getBaseContext().getResources();
@@ -153,7 +108,7 @@ public class Intro extends Activity {
             }
         });
     }
-    @Override
+   /* @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
@@ -167,12 +122,5 @@ public class Intro extends Activity {
         } else if (newConfig.locale == Locale.FRENCH){
             Toast.makeText(this, "French", Toast.LENGTH_SHORT).show();
         }
-    }
-    /*LocaleHelper.setLocale(getApplicationContext(),"en");
-    txtSelectLanguage.setText(R.string.txt_selectLanguage);
-    adapterEn = ArrayAdapter.createFromResource(context,R.array.language,R.layout.support_simple_spinner_dropdown_item);
-    selectLanguage.setAdapter(adapterEn);
-    buttonContinue.setText(R.string.continueB);
-    break;*/
-
+    }*/
 }

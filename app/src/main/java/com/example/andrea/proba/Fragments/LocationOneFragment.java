@@ -62,7 +62,7 @@ public class LocationOneFragment extends Fragment {
                     web1.getSettings().setJavaScriptEnabled(true);
                     web1.setWebViewClient(new WebViewClient());
                     web1.setHorizontalScrollBarEnabled(true);
-                    web1.loadUrl("http://www.google.com.mk");
+                    web1.loadUrl("http://www.google.com");
                     web1.requestFocus();
                 } else {
                     web1.setWebViewClient(new WebViewClient());
