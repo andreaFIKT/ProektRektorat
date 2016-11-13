@@ -1,5 +1,6 @@
 package com.example.andrea.proba.Fragments;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.andrea.proba.Menu;
 import com.example.andrea.proba.R;
 
 import org.w3c.dom.Text;
@@ -43,7 +45,7 @@ public class ChangeLanguageFragment extends Fragment {
         img = (ImageView) v.findViewById(R.id.imageMenuChangeLan);
         txt_chLan = (TextView) v.findViewById(R.id.selectLanguageLabelMenuChangeLan);
         list_chLan = (ListView) v.findViewById(R.id.introSelectLanguageMenuChangeLan);
-        btn_chLan = (Button) v.findViewById(R.id.btnContinueMenuChangeLan);
+
 
         adapter = ArrayAdapter.createFromResource(getContext(),
                 R.array.language, android.R.layout.simple_spinner_item);
@@ -65,6 +67,8 @@ public class ChangeLanguageFragment extends Fragment {
                     getContext().getResources().updateConfiguration(
                             getContext().getResources().getConfiguration(),
                             getContext().getResources().getDisplayMetrics());
+                    Intent intent = new Intent(getActivity(),Menu.class);
+                    startActivity(intent);
                 }
                 else if(i==1) {
                     lang = "en";
@@ -78,13 +82,9 @@ public class ChangeLanguageFragment extends Fragment {
                     getContext().getResources().updateConfiguration(
                             getContext().getResources().getConfiguration(),
                             getContext().getResources().getDisplayMetrics());
+                    Intent intent = new Intent(getActivity(),Menu.class);
+                    startActivity(intent);
                 }
-            }
-        });
-        btn_chLan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
             }
         });
         return v;
