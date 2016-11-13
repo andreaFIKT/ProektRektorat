@@ -22,6 +22,7 @@ public class Location7Fragment extends android.support.v4.app.Fragment {
     Button buttonMore;
     Button buttonLess;
     boolean connA;
+    String linkOff;
 
     public Location7Fragment() {
         // Required empty public constructor
@@ -32,6 +33,7 @@ public class Location7Fragment extends android.support.v4.app.Fragment {
         View v = inflater.inflate(R.layout.location_7_fragment, container, false);
         web7 = (WebView) v.findViewById(R.id.webViewLoc7);
         connA = checkNetworkConnection(getContext());
+        linkOff = getResources().getString(R.string.loc7_malaTabla_link_offline);
         if(connA)
         {
             web7.setHorizontalScrollBarEnabled(true);
@@ -41,7 +43,7 @@ public class Location7Fragment extends android.support.v4.app.Fragment {
        else
         {
             web7.setHorizontalScrollBarEnabled(true);
-            web7.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+            web7.loadUrl(linkOff);
             web7.requestFocus();
         }
         buttonMore = (Button) v.findViewById(R.id.btnMoreLoc7);
@@ -57,7 +59,7 @@ public class Location7Fragment extends android.support.v4.app.Fragment {
                 else
                 {
                     web7.setHorizontalScrollBarEnabled(true);
-                    web7.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web7.loadUrl(linkOff);
                     web7.requestFocus();
                 }
             }
@@ -76,7 +78,7 @@ public class Location7Fragment extends android.support.v4.app.Fragment {
                 else
                 {
                     web7.setHorizontalScrollBarEnabled(true);
-                    web7.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web7.loadUrl(linkOff);
                     web7.requestFocus();
                 }
 

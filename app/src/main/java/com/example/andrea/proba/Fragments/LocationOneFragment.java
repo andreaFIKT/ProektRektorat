@@ -24,6 +24,7 @@ public class LocationOneFragment extends Fragment {
     Button buttonMore;
     Button buttonLess;
     boolean connA;
+    String linkOff1;
 
     public LocationOneFragment() {
         // Required empty public constructor
@@ -35,6 +36,7 @@ public class LocationOneFragment extends Fragment {
         web1 = (WebView) v.findViewById(R.id.webView);
         Log.d("INTERNET", String.valueOf(checkNetworkConnection(getContext())));
         connA = checkNetworkConnection(getContext());
+        linkOff1 = getResources().getString(R.string.loc1_malaTabla_link_offline);
 
         if (connA == true)
 
@@ -47,7 +49,7 @@ public class LocationOneFragment extends Fragment {
         } else {
             web1.setWebViewClient(new WebViewClient());
             web1.setHorizontalScrollBarEnabled(true);
-            web1.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+            web1.loadUrl(linkOff1);
             web1.requestFocus();
         }
 
@@ -67,7 +69,7 @@ public class LocationOneFragment extends Fragment {
                 } else {
                     web1.setWebViewClient(new WebViewClient());
                     web1.setHorizontalScrollBarEnabled(true);
-                    web1.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web1.loadUrl(linkOff1);
                     web1.requestFocus();
                 }
 
@@ -90,7 +92,7 @@ public class LocationOneFragment extends Fragment {
                 } else {
                     web1.setWebViewClient(new WebViewClient());
                     web1.setHorizontalScrollBarEnabled(true);
-                    web1.loadUrl("file:///android_asset/mali_tabli/mal-sv-kliment.html");
+                    web1.loadUrl(linkOff1);
                     web1.requestFocus();
                 }
             }

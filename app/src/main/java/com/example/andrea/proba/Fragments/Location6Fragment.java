@@ -22,7 +22,7 @@ public class Location6Fragment extends android.support.v4.app.Fragment {
     Button buttonMore;
     Button buttonLess;
     boolean connA;
-
+    String linkOff;
     public Location6Fragment() {
         // Required empty public constructor
     }
@@ -32,6 +32,7 @@ public class Location6Fragment extends android.support.v4.app.Fragment {
         View v = inflater.inflate(R.layout.location_6_fragment, container, false);
         web6 = (WebView) v.findViewById(R.id.webViewLoc6);
         connA = checkNetworkConnection(getContext());
+        linkOff = getResources().getString(R.string.loc6_malaTabla_link_offline);
         if(connA)
         {
             web6.setHorizontalScrollBarEnabled(true);
@@ -41,7 +42,7 @@ public class Location6Fragment extends android.support.v4.app.Fragment {
         else
         {
             web6.setHorizontalScrollBarEnabled(true);
-            web6.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+            web6.loadUrl(linkOff);
             web6.requestFocus();
         }
 
@@ -58,7 +59,7 @@ public class Location6Fragment extends android.support.v4.app.Fragment {
                 else
                 {
                     web6.setHorizontalScrollBarEnabled(true);
-                    web6.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web6.loadUrl(linkOff);
                     web6.requestFocus();
                 }
 
@@ -78,7 +79,7 @@ public class Location6Fragment extends android.support.v4.app.Fragment {
                 else
                 {
                     web6.setHorizontalScrollBarEnabled(true);
-                    web6.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web6.loadUrl(linkOff);
                     web6.requestFocus();
                 }
 

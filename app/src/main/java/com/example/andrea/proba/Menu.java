@@ -172,7 +172,6 @@ public class Menu extends AppCompatActivity
         {
             if(sMapFragment.isAdded())
                 sFM.beginTransaction().hide(sMapFragment).commit();
-//            fragmentLoc1 = new LocationOneFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, changeLanFragment);
             ft.commit();

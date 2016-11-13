@@ -45,6 +45,7 @@ public class ChangeLanguageFragment extends Fragment {
         img = (ImageView) v.findViewById(R.id.imageMenuChangeLan);
         txt_chLan = (TextView) v.findViewById(R.id.selectLanguageLabelMenuChangeLan);
         list_chLan = (ListView) v.findViewById(R.id.introSelectLanguageMenuChangeLan);
+        txt_chLan.setText(R.string.txt_selectLanguage);
 
 
         adapter = ArrayAdapter.createFromResource(getContext(),

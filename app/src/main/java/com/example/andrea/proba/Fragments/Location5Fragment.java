@@ -22,6 +22,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
     Button buttonMore;
     Button buttonLess;
     boolean connA;
+    String linkOff;
 
     public Location5Fragment() {
         // Required empty public constructor
@@ -32,6 +33,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
         View v = inflater.inflate(R.layout.location_5_fragment, container, false);
         web5 = (WebView) v.findViewById(R.id.webViewLoc5);
         connA = checkNetworkConnection(getContext());
+        linkOff = getResources().getString(R.string.loc5_malaTabla_link_offline);
         if(connA)
         {
             web5.setHorizontalScrollBarEnabled(true);
@@ -41,7 +43,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
         else
         {
             web5.setHorizontalScrollBarEnabled(true);
-            web5.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+            web5.loadUrl(linkOff);
             web5.requestFocus();
         }
         buttonMore = (Button) v.findViewById(R.id.btnMoreLoc5);
@@ -63,7 +65,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
                 else
                 {
                     web5.setHorizontalScrollBarEnabled(true);
-                    web5.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web5.loadUrl(linkOff);
                     web5.requestFocus();
                 }
 
@@ -83,7 +85,7 @@ public class Location5Fragment extends android.support.v4.app.Fragment {
                 else
                 {
                     web5.setHorizontalScrollBarEnabled(true);
-                    web5.loadUrl("file:///android_asset/mali_tabli/plaosnik.html");
+                    web5.loadUrl(linkOff);
                     web5.requestFocus();
                 }
             }
