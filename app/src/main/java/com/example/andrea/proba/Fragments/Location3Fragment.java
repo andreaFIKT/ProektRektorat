@@ -37,7 +37,7 @@ public class Location3Fragment extends android.support.v4.app.Fragment {
         if(connA)
         {
             web3.setHorizontalScrollBarEnabled(true);
-            web3.loadUrl("http://www.fikt.uklo.edu.mk");
+            web3.loadUrl("http://stklimentpath.fikt.edu.mk/samuilova-tvrdina.html");
             web3.requestFocus();
         }
         else
@@ -54,7 +54,7 @@ public class Location3Fragment extends android.support.v4.app.Fragment {
                 if(connA)
                 {
                     web3.setHorizontalScrollBarEnabled(true);
-                    web3.loadUrl("http://www.google.com");
+                    web3.loadUrl("http://stklimentpath.fikt.edu.mk/samuilova-tvrdina.html");
                     web3.requestFocus();
                 }
                 else
@@ -74,7 +74,7 @@ public class Location3Fragment extends android.support.v4.app.Fragment {
                 if(connA)
                 {
                     web3.setHorizontalScrollBarEnabled(true);
-                    web3.loadUrl("http://www.fikt.uklo.edu.mk");
+                    web3.loadUrl("http://stklimentpath.fikt.edu.mk/samuilova-tvrdina.html");
                     web3.requestFocus();
                 }
                 else

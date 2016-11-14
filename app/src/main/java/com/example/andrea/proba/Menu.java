@@ -109,6 +109,10 @@ public class Menu extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("@string/app_name");
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame,sMapFragment);
+        ft.commit();
+
 
         /*ActionBar acBar = getSupportActionBar();
         acBar.setTitle("@string/toolbar");
@@ -123,6 +127,7 @@ public class Menu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         sMapFragment.getMapAsync(this);
+
 
     }
 

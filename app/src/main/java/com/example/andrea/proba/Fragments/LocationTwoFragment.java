@@ -36,7 +36,7 @@ public class LocationTwoFragment extends android.support.v4.app.Fragment {
         linkOff = getResources().getString(R.string.loc2_malaTabla_link_offline);
         if(connA==true) {
             web2.setHorizontalScrollBarEnabled(true);
-            web2.loadUrl("http://www.fikt.uklo.edu.mk");
+            web2.loadUrl("http://stklimentpath.fikt.edu.mk/gorna-porta.html");
             web2.requestFocus();
         }
         else
@@ -52,7 +52,7 @@ public class LocationTwoFragment extends android.support.v4.app.Fragment {
             public void onClick(View view) {
                 if(connA==true) {
                     web2.setHorizontalScrollBarEnabled(true);
-                    web2.loadUrl("http://www.fikt.uklo.edu.mk");
+                    web2.loadUrl("http://stklimentpath.fikt.edu.mk/gorna-porta.html");
                     web2.requestFocus();
                 }
                 else
@@ -72,7 +72,7 @@ public class LocationTwoFragment extends android.support.v4.app.Fragment {
             public void onClick(View view) {
                 if(connA==true) {
                     web2.setHorizontalScrollBarEnabled(true);
-                    web2.loadUrl("http://www.fikt.uklo.edu.mk");
+                    web2.loadUrl("http://stklimentpath.fikt.edu.mk/gorna-porta.html");
                     web2.requestFocus();
                 }
                 else
